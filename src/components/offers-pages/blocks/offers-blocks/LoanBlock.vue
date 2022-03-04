@@ -1,6 +1,6 @@
 <template>
   <div class="row ps-3 pe-3 pt-3">
-    <a :href="src" class="col-12 loan-block ps-4 pe-4 pt-3 pb-3" :style="{'background-color':background}">
+    <a :href="src" target="_blank" class="col-12 loan-block ps-4 pe-4 pt-3 pb-3" :style="{'background-color':background}">
       <div class="row justify-content-between">
         <div class="col-auto align-self-center">
           <div class="row">
