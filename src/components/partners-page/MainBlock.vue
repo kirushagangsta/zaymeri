@@ -26,13 +26,11 @@ export default {
     await fetch('https://api.podberu.su/api/v1/partner/')
       .then(response => response.json())
       .then(json => this.post = json);
-
     let post = this.post["data"];
     for (let i=0 ; i<post.length ; i++) {
       this.src.push(post[i].icon);
     }
   },
-
 }
 </script>
 
