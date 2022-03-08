@@ -1,6 +1,5 @@
 <template>
-    <img src="@/assets/images/tinkoff.svg" class="partners__logos__image" alt="partner-logo">
-    <img src="@/assets/images/joymoney.svg" class="partners__logos__image" alt="partner-logo">
+    <img :src="require('@/assets/images/'+ imageSrc + '.png')" class="partners__logos__image" alt="partner-logo">
 </template>
 
 <script>
@@ -8,7 +7,7 @@ export default {
   name: "PartnersImages",
   props : {
     imageSrc : String
-  }
+  },
 }
 </script>
 
@@ -16,5 +15,7 @@ export default {
 .partners__logos__image{
   margin-left: 10px;
   margin-right: 10px;
+  width: 60px;
+  height: 60px;
 }
 </style>
