@@ -38,7 +38,13 @@ export default {
           let requiredPicturePartnerNames = [];
           this.offers = json["data"];
           for (let i=0; i< json["data"].length ; i++) {
-            requiredPicturePartnerNames.push(json["data"][i].partner);
+            if (json["data"][i].partner) {
+              requiredPicturePartnerNames.push(json["data"][i].partner);
+            }
+            else {
+              requiredPicturePartnerNames.push(json["data"][i].name);
+            }
+
           }
           await this.fetchPictures(requiredPicturePartnerNames)
         });
