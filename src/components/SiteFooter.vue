@@ -15,7 +15,7 @@
         ИНН 9701182612, ОГРН 1217700379291. 105005, г. Москва, ул. Бауманская, д.7, стр.1, антресоль 2, помещение I, ком.17
       </div>
       <div class="row justify-content-between mt-3">
-        <a class="col-auto footer__social-links p-0"  :href="items.link" v-for="items in social" :key="items.src">
+        <a class="col-auto footer__social-links p-0" :href="items.href" target="_blank" v-for="items in social" :key="items.src">
           <img :src="require('@/assets/images/' + items.src)" alt="social-img" class="w-100">
         </a>
       </div>
@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
     let src = ["vk.png","instagram.png","facebook.png","Telegram.png","Zen.png"];
-    let href = ["https://vk.com/groups","https://vk.com/groups","https://vk.com/groups","https://vk.com/groups","https://vk.com/groups"];
+    let href = ["https://vk.com/groups","https://instagram.com/zaymeri.ru?utm_medium=copy_link","https://vk.com/groups","https://vk.com/groups","https://vk.com/groups"];
     for (let i = 0; i<src.length; i++) {
       let img = new this.imgSocial(src[i], href[i]);
       this.social.push(img);
